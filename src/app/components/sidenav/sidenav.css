@@ -1,0 +1,42 @@
+.example-container {
+  width: 100%;
+  height: 100%;
+  border: 1px solid white;
+  background-color: white;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: start;
+  justify-content: left;
+  
+}
+
+
+.example-sidenav {
+  padding: 20px;
+  color: darkslateblue;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+  
+}
+
+mat-toolbar{
+  background-color: darkslateblue;
+  color: white;
+  border-bottom: 1px solid gainsboro; 
+}
+
+.mat-icon-color{
+  color: blueviolet;
+}
+mat-toolbar > button > .mat-icon{
+  color: white;
+}
+.mat-drawer{
+  color: green;
+}
+

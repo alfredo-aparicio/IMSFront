@@ -1,0 +1,19 @@
+
+<mat-card>
+    <mat-card-header fxLayout="column" fxLayoutAlign="center center">
+        <mat-card-title>Bienvenido</mat-card-title>
+        <mat-card-subtitle>Iniciar sesión</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-footer>
+        <div *ngIf="!user">
+            <button matFab (click)="login()" extended>Iniciar sesión con Google
+            </button>
+        </div>
+
+        <div *ngIf="user">
+            <p>Welcome usuario registrado</p>
+            <button matFab (click)="logout()">Logout</button>
+        </div>
+    </mat-card-footer>
+</mat-card>

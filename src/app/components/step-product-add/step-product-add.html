@@ -1,0 +1,35 @@
+<mat-stepper linear #stepper>
+  <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Ingresa el nombre del producto</ng-template>
+      <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput name="name" formControlName="name" placeholder="Mouse rgb" required>
+      </mat-form-field>
+      <div>
+        <button matButton matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Ingresa el precio del producto</ng-template>
+      <mat-form-field>
+        <mat-label>Precio</mat-label>
+        <input type="number" name="price" matInput formControlName="price"  required>
+      </mat-form-field>
+      <div>
+        <button matButton matStepperPrevious>Atrás</button>
+        <button matButton matStepperNext>Siguiente</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Hecho</ng-template>
+    <p>Guarda los cambios</p>
+    <div>
+      <button matButton matStepperPrevious>Atrás</button>
+      <button matButton (click)="saveProduct()">Guardar</button>
+    </div>
+  </mat-step>
+</mat-stepper>
